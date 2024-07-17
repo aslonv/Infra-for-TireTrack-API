@@ -46,20 +46,30 @@ Install the dependencies:
 
 ### Get All Tires
 
-GET/tires
+ ```sh
+    GET/tires
+    ```
 
 ### Get a Tire by ID
 
-GET /tires/{tire_id}
+```sh
+    GET /tires/{tire_id}
+    ```
 
 ### Create a Tire
 
-POST/tires
+```sh
+    POST/tires
+    ```
 
 ### Update a Tire
 
-PUT /tires/{tire_id}
+```sh
+    PUT /tires/{tire_id}
+    ```
 
 ### Delete a Tire
 
-DELETE /tires/{tire_id}
+```sh
+    DELETE /tires/{tire_id}
+    ```
