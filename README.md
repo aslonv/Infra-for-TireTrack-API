@@ -48,28 +48,28 @@ Install the dependencies:
 
  ```sh
     GET/tires
-    ```
+ ```
 
 ### Get a Tire by ID
 
 ```sh
     GET /tires/{tire_id}
-    ```
+```
 
 ### Create a Tire
 
 ```sh
     POST/tires
-    ```
+```
 
 ### Update a Tire
 
 ```sh
     PUT /tires/{tire_id}
-    ```
+```
 
 ### Delete a Tire
 
 ```sh
     DELETE /tires/{tire_id}
-    ```
+```
