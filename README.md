@@ -1,3 +1,7 @@
+# Tire Management API
+
+RESTful API for managing tire data, built using Falcon and Redis. The API provides endpoints to create, read, update, and delete tire information.
+
 Implemented data validation in the service layer (validate_tire_data method) to ensure that only valid data is processed and stored, preventing errors and maintaining data integrity.
 
 - Use of Redis for fast in-memory data operations.
@@ -46,20 +50,30 @@ Install the dependencies:
 
 ### Get All Tires
 
-GET/tires
+ ```sh
+    GET/tires
+ ```
 
 ### Get a Tire by ID
 
-GET /tires/{tire_id}
+```sh
+    GET /tires/{tire_id}
+```
 
 ### Create a Tire
 
-POST/tires
+```sh
+    POST/tires
+```
 
 ### Update a Tire
 
-PUT /tires/{tire_id}
+```sh
+    PUT /tires/{tire_id}
+```
 
 ### Delete a Tire
 
-DELETE /tires/{tire_id}
+```sh
+    DELETE /tires/{tire_id}
+```
