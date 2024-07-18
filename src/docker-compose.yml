@@ -3,17 +3,18 @@ version: '3.9'
 services:
   backend:
     build: .
+    volumes:
+      - .:/app
     ports:
       - "8080:8080"
+    depends_on:
+      - redis
+    command: gunicorn main:app --bind 0.0.0.0:8080
     environment:
       - REDIS_SERVER=redis
       - REDIS_PORT=6379
-      - REDIS_PASSWORD=your_redis_password
-    depends_on:
-      - redis
 
   redis:
-    image: redis:6
-    command: redis-server --requirepass your_redis_password
+    image: redis:6.2-alpine
     ports:
       - "6379:6379"

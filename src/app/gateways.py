@@ -2,8 +2,8 @@
 
 import falcon
 import json
-from app import TireService
-from app.exceptions import TireValidationError, TireNotFoundError
+from .services import TireService
+from .exceptions import TireValidationError, TireNotFoundError
 
 class TireResource:
     def __init__(self, service: TireService):

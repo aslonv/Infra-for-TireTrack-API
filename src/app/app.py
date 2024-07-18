@@ -1,9 +1,9 @@
 # src/app/app.py
 
 import falcon
-from app.gateways import TireResource
-from app.services import TireService
-from app.database import DBInterface
+from .gateways import TireResource
+from .services import TireService
+from .database import DBInterface
 
 def create_app() -> falcon.App:
     db_interface = DBInterface()

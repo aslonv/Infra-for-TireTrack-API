@@ -2,9 +2,9 @@
 
 import uuid
 from typing import Dict, List, Optional
-from app.database import DBInterface
-from app import Tire
-from app.exceptions import TireValidationError, TireNotFoundError
+from .database import DBInterface
+from .models import Tire
+from .exceptions import TireValidationError, TireNotFoundError
 
 class TireService:
     def __init__(self, db: DBInterface):

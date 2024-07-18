@@ -5,18 +5,16 @@ import logging
 import os
 from redis import Redis
 from redis.exceptions import ConnectionError
-from app import Tire
+from .models import Tire
 
 logger = logging.getLogger(__name__)
 
 redis_client = Redis(
-    **{
-        "host": os.environ.get("REDIS_SERVER"),
-        "port": os.environ.get("REDIS_PORT"),
-        "password": os.environ.get("REDIS_PASSWORD"),
-    }
+    host=os.environ.get("REDIS_SERVER", "localhost"),
+    port=int(os.environ.get("REDIS_PORT", 6379)),
+    password=os.environ.get("REDIS_PASSWORD", ""),
+    decode_responses=True
 )
-
 class DBInterface:
     """
     Class responsible to interface with the DB
